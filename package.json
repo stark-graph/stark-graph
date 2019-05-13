@@ -1,0 +1,38 @@
+{
+  "name": "stark-graph",
+  "version": "1.0.0",
+  "description": "graph visualizer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmal1/stark-graph.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmal1/stark-graph/issues"
+  },
+  "homepage": "https://github.com/gmal1/stark-graph#readme",
+  "dependencies": {
+    "d3": "^5.9.2",
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-d3-tree": "^1.12.4",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.9.0",
+    "jest": "^24.8.0",
+    "redux-devtools-extension": "^2.13.8",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
