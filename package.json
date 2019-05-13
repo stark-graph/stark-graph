@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/gmal1/stark-graph#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "d3": "^5.9.2",
     "express": "^4.16.4",
     "react": "^16.8.6",
