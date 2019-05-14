@@ -8,7 +8,6 @@ module.exports = {
     publicPath: '/build/',
   },
   mode: process.env.NODE_ENV || 'development',
-
   module: {
     rules: [
       {
@@ -33,6 +32,15 @@ module.exports = {
           },
           {
             loader: 'sass-loader', // compiles Sass to CSS
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
           },
         ],
       },
