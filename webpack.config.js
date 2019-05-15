@@ -1,30 +1,54 @@
-var status = process.env.NODE_ENV; //taken from script so we don't have to flip mode when using development/production
-var path = require('path');
+const path = require('path');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    path: path.resolve(__dirname, '/build'),
+    path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
+    publicPath: '/build/',
   },
-
-  // Enable sourcemaps for debugging webpack's output.
-  // devtool: 'source-map',
-
-  resolve: {
-    // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx'],
-  },
-  mode: status,
-
+  mode: process.env.NODE_ENV || 'development',
   module: {
     rules: [
-      // All files with a '.ts' or '.tsx' extension will be handled by babel-loader
-      { test: /.tsx?$/, exclude: /node-modules/, use: 'babel-loader' },
-      { test: /.jsx?$/, exclude: /node-modules/, use: 'babel-loader' },
-      { test: /.js?$/, exclude: /node-modules/, use: 'babel-loader' },
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      // { enforce: 'pre', test: /.js$/, exclude: /node-modules/, loader: 'source-map-loader' },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
+      {
+        test: /\.s[ac]ss$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+          {
+            loader: 'sass-loader', // compiles Sass to CSS
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+        ],
+      },
     ],
+  },
+
+  devServer: {
+    hot: true,
+    contentBase: path.resolve(__dirname, 'public'),
   },
 };
