@@ -1,8 +1,9 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
+import TreeContainer from './TreeContainer.jsx';
 
 const App = () => {
-  return <div>hi bo3</div>;
+  return <TreeContainer />;
 };
 
 export default hot(App);
