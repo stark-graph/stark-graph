@@ -1,8 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import RightBar from '../components/RightBar.jsx';
 import Graph from '../components/Graph.jsx';
+import LeftBar from '../components/LeftBar.jsx';
+import { addElement } from '../actions/active-actions.js';
 
-const MainContainer = () => {
+const mapDispatchToProps = dispatch => ({
+  addActiveArrElement: ({ val }) => {
+    dispatch(addElement({ val }));
+  },
+});
+
+const mapStateToProps = store => ({
+  activeTree: store.activeState.activeTree,
+  // algoName: store.algoState.algoName,
+  treesArr: store.activeState.treesArr,
+  treesObj: store.activeState.treesObj,
+});
+
+const MainContainer = props => {
+  const { activeTree, treesArr, algoName, treesObj, addActiveArrElement } = props;
   return (
     <div
       className="main-container"
@@ -12,13 +29,16 @@ const MainContainer = () => {
         width: '100%',
         height: '100%',
         borderStyle: 'solid',
-        borderSidth: '2px',
       }}
     >
-      <Graph />
-      <RightBar />
+      <LeftBar addElement={addActiveArrElement} />
+      <Graph treesArr={treesArr} treesObj={treesObj} activeTree={activeTree} />
+      <RightBar algoName={algoName} />
     </div>
   );
 };
 
-export default MainContainer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MainContainer);

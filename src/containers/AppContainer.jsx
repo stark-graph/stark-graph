@@ -12,7 +12,7 @@ const AppContainer = () => {
         width: '100%',
         height: '100%',
         borderStyle: 'solid',
-        borderSidth: '2px',
+        borderWidth: '2px',
       }}
     >
       <HeaderBar />

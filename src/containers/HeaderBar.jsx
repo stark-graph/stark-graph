@@ -246,11 +246,11 @@ const HeaderBar = () => {
         width: '100%',
         height: '10%',
         borderStyle: 'solid',
-        borderSidth: '2px',
+        borderWidth: '2px',
       }}
     >
       {dummyTrees.map((el, idx) => (
-        <TreeTab treeId={idx} />
+        <TreeTab treeId={idx} key={idx} />
       ))}
     </div>
   );
