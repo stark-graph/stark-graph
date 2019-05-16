@@ -3,8 +3,7 @@ import * as types from '../actions/action-types';
 const initialState = {
   algoName: '',
   activeTree: 0,
-  treesArr: [[11, 16, 14, 15, 22, 12, 13, 100], [1, 2], [10]],
-  treesObj: [{}, {}, {}],
+  treesArr: [[11, 20, 14, 3, 22, 56, 1, 19, 78, 6], [10, 2], [10]],
 };
 
 const activeReducer = function(state = initialState, action) {
