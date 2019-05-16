@@ -93,7 +93,7 @@ const Graph = () => {
         width: '80%',
         height: '100%',
         borderStyle: 'solid',
-        borderSidth: '2px'
+        borderWidth: '2px'
       }}
     >
       Binary Search Tree
