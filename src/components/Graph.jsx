@@ -41,8 +41,8 @@ class Node {
         r: 10,
         x: 0,
         y: 0,
-        fill: isNewest ? 'red' : 'grey'
-      }
+        fill: isNewest ? 'red' : 'grey',
+      },
     };
     this.children = ['', ''];
   }
@@ -96,20 +96,21 @@ const createTree = arr => {
 const data2 = [11, 16, 14, 15, 22, 12, 13, 100];
 const data = createTree(data2);
 
-const Graph = () => {
+const Graph = props => {
+  const { treesArr, activeTree } = props;
   return (
     <div
-      className='graph'
+      className="graph"
       style={{
         width: '80%',
         height: '100%',
         borderStyle: 'solid',
-        borderWidth: '2px'
+        borderWidth: '2px',
       }}
     >
       Binary Search Tree
       <Tree
-        data={data}
+        data={createTree(treesArr[activeTree])}
         separation={{ siblings: 1, nonSiblings: 1 }}
         orientation={'vertical'}
         transitionDuration={0}
@@ -120,17 +121,17 @@ const Graph = () => {
               name: {
                 fill: '#D3D3D3',
                 stroke: '#D3D3D3',
-                strokeWidth: 1
-              }
+                strokeWidth: 1,
+              },
             },
             leafNode: {
               name: {
                 fill: '#D3D3D3',
                 stroke: '#D3D3D3',
-                strokeWidth: 1
-              }
-            }
-          }
+                strokeWidth: 1,
+              },
+            },
+          },
         }}
       />
     </div>

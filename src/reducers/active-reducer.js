@@ -3,7 +3,7 @@ import * as types from '../actions/action-types';
 const initialState = {
   algoName: '',
   activeTree: 0,
-  treesArr: [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 2], []],
+  treesArr: [[11, 16, 14, 15, 22, 12, 13, 100], [1, 2], []],
   treesObj: [{}, {}, {}],
 };
 
