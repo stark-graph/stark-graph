@@ -1,6 +1,4 @@
-import React from 'react';
-
-const codeString = `class Node {
+class Node {
   constructor(val) {
     this.value = val;
     this.left = null;
@@ -42,25 +40,4 @@ class BST {
       }
     }
   }
-}`;
-
-const AlgoSelector = () => {
-  return (
-    <div
-      className='algo'
-      style={{
-        width: 'auto',
-        height: '100%',
-        borderStyle: 'solid',
-        borderWidth: '2px',
-        overflowY: 'auto'
-      }}
-    >
-      <pre>
-        <code className='language-javascript'>{codeString}</code>
-      </pre>
-    </div>
-  );
-};
-
-export default AlgoSelector;
+}
