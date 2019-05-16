@@ -1,6 +1,5 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 import AppContainer from '../containers/AppContainer.jsx';
 
 export const App = () => (
@@ -11,7 +10,7 @@ export const App = () => (
       width: '98vw',
       height: '95vh',
       borderStyle: 'solid',
-      borderSidth: '2px'
+      borderSidth: '2px',
     }}
   >
     <header style={{ height: '40px', width: '100%', color: 'red' }}>
