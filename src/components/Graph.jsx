@@ -31,28 +31,38 @@ import Tree from 'react-d3-tree';
 */
 
 class Node {
-  constructor(val) {
+  constructor(val, isNewest) {
     this.name = val.toString();
     this.attributes = {};
+    this.isNewest = isNewest;
+    this.nodeSvgShape = {
+      shape: 'circle',
+      shapeProps: {
+        r: 10,
+        x: 0,
+        y: 0,
+        fill: isNewest ? 'red' : 'grey'
+      }
+    };
     this.children = ['', ''];
   }
 }
 
 // #TODO stop null nodes from rendering
-const addNewNode = (node, val) => {
-  const newNode = new Node(val);
+const addNewNode = (node, val, isNewest) => {
+  const newNode = new Node(val, isNewest);
 
   if (val > parseInt(node.name)) {
-    if (node.children[0] === '') {
-      node.children[0] = newNode;
-    } else {
-      addNewNode(node.children[0], val);
-    }
-  } else if (val < parseInt(node.name)) {
     if (node.children[1] === '') {
       node.children[1] = newNode;
     } else {
-      addNewNode(node.children[1], val);
+      addNewNode(node.children[1], val, isNewest);
+    }
+  } else if (val < parseInt(node.name)) {
+    if (node.children[0] === '') {
+      node.children[0] = newNode;
+    } else {
+      addNewNode(node.children[0], val, isNewest);
     }
   }
   return node;
@@ -76,13 +86,14 @@ const filterEmptyStrings = obj => {
 const createTree = arr => {
   const newTree = new Node(arr[0]);
   for (let i = 1; i < arr.length; i++) {
-    addNewNode(newTree, arr[i]);
+    let isNewest = i === arr.length - 1;
+    addNewNode(newTree, arr[i], isNewest);
   }
   // d3 expects an array of objects
   return [filterEmptyStrings(newTree)];
 };
 
-const data2 = [11, 16, 14, 15, 22, 12, 13, 100, 50];
+const data2 = [11, 16, 14, 15, 22, 12, 13, 100];
 const data = createTree(data2);
 
 const Graph = () => {
@@ -99,9 +110,10 @@ const Graph = () => {
       Binary Search Tree
       <Tree
         data={data}
-        separation={{ siblings: 0.3, nonSiblings: 0.3 }}
+        separation={{ siblings: 1, nonSiblings: 1 }}
+        orientation={'vertical'}
         transitionDuration={0}
-        translate={{ x: 200, y: 300 }}
+        translate={{ x: 500, y: 25 }}
         styles={{
           nodes: {
             node: {
