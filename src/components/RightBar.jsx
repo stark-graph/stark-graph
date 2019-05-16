@@ -7,12 +7,9 @@ const RightBar = () => {
       className='right-bar'
       style={{
         width: '20%',
-        height: 'auto',
-        borderStyle: 'solid',
-        borderWidth: '2px'
+        height: 'auto'
       }}
     >
-      right-bar
       <AlgoSelector />
     </div>
   );
