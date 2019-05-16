@@ -1,15 +1,13 @@
 import { combineReducers } from 'redux';
 
-// Reducers 
+// Reducers
 import algoReducer from './algo-reducer';
-import inputReducer from './input-reducer';
 import activeReducer from './active-reducer';
 
 // Combine Reducers
 const reducers = combineReducers({
-	algoState: algoReducer,
-	inputState: inputReducer,
-	activeState: activeReducer
+  algoState: algoReducer,
+  activeState: activeReducer,
 });
 
 export default reducers;

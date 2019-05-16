@@ -93,9 +93,6 @@ const createTree = arr => {
   return [filterEmptyStrings(newTree)];
 };
 
-const data2 = [11, 16, 14, 15, 22, 12, 13, 100];
-const data = createTree(data2);
-
 const Graph = props => {
   const { treesArr, activeTree } = props;
   return (
