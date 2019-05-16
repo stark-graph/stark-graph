@@ -67,5 +67,5 @@ class BST {
   );
 };
 
-SyntaxHighlighter.registerLanguage('jsx', jsx);
+//SyntaxHighlighter.registerLanguage('jsx', jsx);
 export default AlgoSelector;
