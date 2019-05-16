@@ -32,7 +32,7 @@ const MainContainer = props => {
     >
       <LeftBar addElement={addActiveArrElement} />
       <Graph treesArr={treesArr} activeTree={activeTree} />
-      <RightBar algoName={algoName} />
+      <RightBar algoName={algoName} activeTree={activeTree} />
     </div>
   );
 };
