@@ -62,3 +62,5 @@ typings/
 
 # ignore bundle
 build/
+
+package-lock.json

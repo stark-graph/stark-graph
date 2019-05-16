@@ -26,8 +26,8 @@
     "react": "^16.8.6",
     "react-d3-tree": "^1.12.4",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "react-syntax-highlighter": "^10.2.1"
+    "react-iframe": "^1.8.0",
+    "react-redux": "^7.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
