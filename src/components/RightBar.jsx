@@ -7,9 +7,13 @@ const RightBar = () => {
       className="right-bar"
       style={{
         width: '20%',
-        height: '100%',
+        height: 'auto',
         borderStyle: 'solid',
+<<<<<<< HEAD
+        borderWdth: '2px'
+=======
         borderWidth: '2px',
+>>>>>>> dev
       }}
     >
       right-bar

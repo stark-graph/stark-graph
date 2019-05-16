@@ -10,7 +10,7 @@ export const App = () => (
       width: '98vw',
       height: '95vh',
       borderStyle: 'solid',
-      borderWidth: '2px',
+      borderWidth: '2px'
     }}
   >
     <header style={{ height: '40px', width: '100%', color: 'red' }}>

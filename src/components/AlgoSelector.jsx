@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+import Iframe from 'react-iframe';
+=======
+>>>>>>> dev
 
 const AlgoSelector = () => {
   return (
@@ -6,61 +10,24 @@ const AlgoSelector = () => {
       className="algo"
       style={{
         width: 'auto',
+<<<<<<< HEAD
+        height: '100%',
+        overflowX: 'scroll',
+        overflowY: 'scroll'
+=======
         height: 'auto',
         borderStyle: 'solid',
         borderWidth: '2px',
         overflowY: 'auto',
+>>>>>>> dev
       }}
     >
-      {/* < language='javascript'> */}
-      <code>
-        {`class Node {
-  constructor(val) {
-    this.value = val;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-class BST {
-  constructor() {
-    this.root = null;
-  }
-
-  add(val) {
-    const root = this.root;
-
-    if (!root) {
-      this.root = new Node(val);
-      return;
-    }
-
-    const currentNode = root;
-    const newNode = new Node(val); 
-
-    while(currentNode){
-      if(val < currentNode.value){
-          if(!currentNode.left){
-            currentNode.left = newNode;
-            break;
-          }
-          else{
-            currentNode = currentNode.left;
-        }
-    }
-    else{
-        if(!currentNode.right){
-            currentNode.right = newNode;
-            break;
-        }
-        else{
-            currentNode = currentNode.right;
-        }
-      }
-    }
-  }
-}`}
-      </code>
+      <Iframe
+        src='https://carbon.now.sh/embed/?bg=rgba(171%2C%20184%2C%20195%2C%201)&t=dracula&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=class%2520Node%2520%257B%250A%2520%2520constructor(val)%2520%257B%250A%2520%2520%2520%2520this.value%2520%253D%2520val%253B%250A%2520%2520%2520%2520this.left%2520%253D%2520null%253B%250A%2520%2520%2520%2520this.right%2520%253D%2520null%253B%250A%2520%2520%257D%250A%257D%250A%250Aclass%2520BST%2520%257B%250A%2520%2520constructor()%2520%257B%250A%2520%2520%2520%2520this.root%2520%253D%2520null%253B%250A%2520%2520%257D%250A%250A%2520%2520add(val)%2520%257B%250A%2520%2520%2520%2520const%2520root%2520%253D%2520this.root%253B%250A%250A%2520%2520%2520%2520if%2520(!root)%2520%257B%250A%2520%2520%2520%2520%2520%2520this.root%2520%253D%2520new%2520Node(val)%253B%250A%2520%2520%2520%2520%2520%2520return%253B%250A%2520%2520%2520%2520%257D%250A%250A%2520%2520%2520%2520const%2520currentNode%2520%253D%2520root%253B%250A%2520%2520%2520%2520const%2520newNode%2520%253D%2520new%2520Node(val)%253B%2520%250A%250A%2520%2520%2520%2520while(currentNode)%257B%250A%2520%2520%2520%2520%2520%2520if(val%2520%253C%2520currentNode.value)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520if(!currentNode.left)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520currentNode.left%2520%253D%2520newNode%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520break%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520else%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520currentNode%2520%253D%2520currentNode.left%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520else%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520if(!currentNode.right)%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520currentNode.right%2520%253D%2520newNode%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520break%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520else%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520currentNode%2520%253D%2520currentNode.right%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%257D'
+        style='transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;'
+        sandbox='allow-scripts allow-same-origin'
+        height='100%'
+      />
     </div>
   );
 };
