@@ -236,7 +236,8 @@ const dummyTrees = [
   },
 ];
 
-const HeaderBar = () => {
+const HeaderBar = props => {
+  const { changeActiveTree, treesArr } = props;
   return (
     <div
       className="header-bar"
@@ -249,8 +250,8 @@ const HeaderBar = () => {
         borderWidth: '2px',
       }}
     >
-      {dummyTrees.map((el, idx) => (
-        <TreeTab treeId={idx} key={idx} />
+      {treesArr.map((el, idx) => (
+        <TreeTab treeIdx={idx} key={idx} changeActiveTree={changeActiveTree} />
       ))}
     </div>
   );

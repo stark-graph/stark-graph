@@ -1,9 +1,10 @@
 import * as types from '../actions/action-types';
 
-export function setActiveTree(activeTree) {
+export function changeActiveTree({ treeIdx }) {
+  console.log('changing active tree: ', treeIdx, typeof treeIdx);
   return {
-    type: types.SET_ACTIVE,
-    payload: activeTree,
+    type: types.CHANGE_ACTIVE_TREE,
+    payload: treeIdx,
   };
 }
 
@@ -11,6 +12,6 @@ export function addElement({ val }) {
   console.log('creating ADD_ELEMENT action');
   return {
     type: types.ADD_ELEMENT,
-    payload: { val },
+    payload: val,
   };
 }
