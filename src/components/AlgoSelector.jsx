@@ -1,17 +1,15 @@
 import React from 'react';
-// import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter/prism-light';
-// import jsx from 'react-syntax-highlighter/dist/esm//languages/prism/jsx';
 
 const AlgoSelector = () => {
   return (
     <div
-      className='algo'
+      className="algo"
       style={{
         width: 'auto',
         height: 'auto',
         borderStyle: 'solid',
-        borderSidth: '2px',
-        'overflow-y': 'auto'
+        borderWidth: '2px',
+        overflowY: 'auto',
       }}
     >
       {/* < language='javascript'> */}
@@ -67,5 +65,4 @@ class BST {
   );
 };
 
-//SyntaxHighlighter.registerLanguage('jsx', jsx);
 export default AlgoSelector;

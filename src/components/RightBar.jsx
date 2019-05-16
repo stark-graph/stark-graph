@@ -4,12 +4,12 @@ import AlgoSelector from './AlgoSelector.jsx';
 const RightBar = () => {
   return (
     <div
-      className='right-bar'
+      className="right-bar"
       style={{
         width: '20%',
         height: '100%',
         borderStyle: 'solid',
-        borderSidth: '2px'
+        borderWidth: '2px',
       }}
     >
       right-bar
