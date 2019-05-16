@@ -1,25 +1,16 @@
 import React from 'react';
-<<<<<<< HEAD
 import Iframe from 'react-iframe';
-=======
->>>>>>> dev
 
 const AlgoSelector = () => {
   return (
     <div
-      className="algo"
+      className='algo'
       style={{
         width: 'auto',
-<<<<<<< HEAD
-        height: '100%',
-        overflowX: 'scroll',
-        overflowY: 'scroll'
-=======
         height: 'auto',
         borderStyle: 'solid',
         borderWidth: '2px',
-        overflowY: 'auto',
->>>>>>> dev
+        overflowY: 'auto'
       }}
     >
       <Iframe
