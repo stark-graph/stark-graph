@@ -90,7 +90,8 @@ MaxHeap.prototype.delMax = function() {
   return tmpMax
 }`;
 
-const AlgoSelector = () => {
+const AlgoSelector = props => {
+  const { activeTree } = props;
   return (
     <div
       className="algo"
@@ -103,7 +104,8 @@ const AlgoSelector = () => {
       }}
     >
       <pre>
-        <code className="language-javascript">{codeString}</code>
+        <code className="language-javascript">{activeTree === 2 ? heapString : BSTstring}</code>
+        {/* <code className="language-javascript">{heapString}</code> */}
       </pre>
     </div>
   );
