@@ -1,6 +1,7 @@
 import React from 'react';
 
-// add onClick to change focusTree
+const treeNames = ['BST-1', 'BST-2', 'Heap'];
+
 const TreeTab = props => {
   const { changeActiveTree, treeIdx } = props;
   return (
@@ -9,7 +10,7 @@ const TreeTab = props => {
       onClick={() => changeActiveTree({ treeIdx })}
       style={{ width: '20%', height: '100%', borderStyle: 'solid', borderWidth: '2px' }}
     >
-      {`Tree ${treeIdx}`}
+      {`${treeNames[treeIdx]}`}
     </div>
   );
 };

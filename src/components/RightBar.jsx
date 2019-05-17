@@ -1,16 +1,17 @@
 import React from 'react';
 import AlgoSelector from './AlgoSelector.jsx';
 
-const RightBar = () => {
+const RightBar = props => {
+  const { activeTree } = props;
   return (
     <div
-      className='right-bar'
+      className="right-bar"
       style={{
         width: '20%',
-        height: 'auto'
+        height: 'auto',
       }}
     >
-      <AlgoSelector />
+      <AlgoSelector activeTree={activeTree} />
     </div>
   );
 };
