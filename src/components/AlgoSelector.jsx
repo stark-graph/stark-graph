@@ -21,7 +21,7 @@ class BST {
       return;
     }
 
-    const currentNode = root;
+    let currentNode = root;
     const newNode = new Node(val);
 
     while (currentNode) {
@@ -44,23 +44,19 @@ class BST {
   }
 }`;
 
-const AlgoSelector = () => {
-  return (
-    <div
-      className='algo'
-      style={{
-        width: 'auto',
-        height: '100%',
-        borderStyle: 'solid',
-        borderWidth: '2px',
-        overflowY: 'auto'
-      }}
-    >
-      <pre>
-        <code className='language-javascript'>{codeString}</code>
-      </pre>
-    </div>
-  );
-};
+const AlgoSelector = () => (
+  <div
+    className="algo"
+    style={{
+      width: 'auto',
+      height: '100%',
+      overflowY: 'auto',
+    }}
+  >
+    <pre>
+      <code className="language-javascript">{codeString}</code>
+    </pre>
+  </div>
+);
 
 export default AlgoSelector;

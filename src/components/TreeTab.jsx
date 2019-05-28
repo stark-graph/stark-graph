@@ -7,7 +7,10 @@ const TreeTab = props => {
     <div
       className="treeTab"
       onClick={() => changeActiveTree({ treeIdx })}
-      style={{ width: '20%', height: '100%', borderStyle: 'solid', borderWidth: '2px' }}
+      style={{
+        width: '20%',
+        height: '100%',
+      }}
     >
       {`Tree ${treeIdx}`}
     </div>

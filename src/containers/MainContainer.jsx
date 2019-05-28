@@ -13,13 +13,19 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = store => ({
   activeTree: store.activeState.activeTree,
-  // algoName: store.algoState.algoName,
   treesArr: store.activeState.treesArr,
   treesObj: store.activeState.treesObj,
 });
 
 const MainContainer = props => {
-  const { activeTree, treesArr, algoName, treesObj, addActiveArrElement } = props;
+  const {
+    activeTree,
+    treesArr,
+    algoName,
+    treesObj,
+    addActiveArrElement,
+  } = props;
+
   return (
     <div
       className="main-container"
@@ -28,7 +34,6 @@ const MainContainer = props => {
         flexDirection: 'row',
         width: '100%',
         height: '100%',
-        borderStyle: 'solid',
       }}
     >
       <LeftBar addElement={addActiveArrElement} />
@@ -40,5 +45,5 @@ const MainContainer = props => {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(MainContainer);

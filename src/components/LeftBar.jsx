@@ -20,8 +20,6 @@ const LeftBar = props => {
       style={{
         width: '20%',
         height: '100%',
-        borderStyle: 'solid',
-        borderWidth: '2px',
       }}
     >
       <form>
@@ -33,7 +31,12 @@ const LeftBar = props => {
           value={input}
           onChange={e => setInput(e.target.value)}
         />
-        <button type="submit" onClick={event => handleAddElement({ event, input, addElement, setInput })}>
+        <button
+          type="submit"
+          onClick={event =>
+            handleAddElement({ event, input, addElement, setInput })
+          }
+        >
           add node
         </button>
       </form>

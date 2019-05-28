@@ -1,8 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import HeaderBar from './HeaderBar.jsx';
 import MainContainer from './MainContainer.jsx';
 import { changeActiveTree } from '../actions/active-actions.js';
-import { connect } from 'react-redux';
 
 const mapDispatchToProps = dispatch => ({
   changeIdxOfActiveTree: ({ treeIdx }) => {
@@ -17,6 +17,7 @@ const mapStateToProps = store => ({
 
 const AppContainer = props => {
   const { changeIdxOfActiveTree, treesArr } = props;
+
   return (
     <div
       className="app-container"
@@ -25,8 +26,6 @@ const AppContainer = props => {
         flexDirection: 'column',
         width: '100%',
         height: '100%',
-        borderStyle: 'solid',
-        borderWidth: '2px',
       }}
     >
       <HeaderBar changeActiveTree={changeIdxOfActiveTree} treesArr={treesArr} />
@@ -37,5 +36,5 @@ const AppContainer = props => {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(AppContainer);
