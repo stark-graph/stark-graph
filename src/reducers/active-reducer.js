@@ -7,18 +7,6 @@ const initialState = {
   treesObj: [{}, {}, {}],
 };
 
-const activeReducer = function(state = initialState, action) {
-  console.log('active reducer called');
-  switch (action.type) {
-    case types.ADD_ELEMENT:
-      return addElement(state, action.payload);
-    case types.CHANGE_ACTIVE_TREE:
-      return changeActiveTree(state, action.payload);
-    default:
-      return state;
-  }
-};
-
 function addElement(state, val) {
   const { treesArr, activeTree } = state;
 
@@ -28,7 +16,6 @@ function addElement(state, val) {
   const activeTreeArr = treesArr[activeTree];
 
   if (activeTreeArr.includes(valNum)) {
-    console.log('returning old state');
     return state;
   }
 
@@ -45,5 +32,16 @@ function changeActiveTree(state, treeIdx) {
   console.log('changing active tree to: ', treeIdx);
   return { ...state, activeTree: treeIdx };
 }
+
+const activeReducer = function(state = initialState, action) {
+  switch (action.type) {
+    case types.ADD_ELEMENT:
+      return addElement(state, action.payload);
+    case types.CHANGE_ACTIVE_TREE:
+      return changeActiveTree(state, action.payload);
+    default:
+      return state;
+  }
+};
 
 export default activeReducer;

@@ -1,4 +1,4 @@
-import * as types from '../actions/action-types';
+import * as types from './action-types';
 
 export function changeActiveTree({ treeIdx }) {
   console.log('changing active tree: ', treeIdx, typeof treeIdx);

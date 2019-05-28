@@ -1,9 +1,8 @@
-import * as types from '../actions/action-types';
+import * as types from './action-types';
 
-export function setAlgorithm(algorithm){
-	return {
-		type: types.SET_ALGOS,
-		algorithm
-	}
+export function setAlgorithm(algorithm) {
+  return {
+    type: types.SET_ALGOS,
+    algorithm,
+  };
 }
- 
