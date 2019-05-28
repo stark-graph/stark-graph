@@ -100,11 +100,3 @@ const Graph = props => {
 };
 
 export default Graph;
-
-// eslint-disable-next-line no-lone-blocks
-{
-  /* fill: '#19f9d8', */
-}
-{
-  /* strokeWidth: 2, */
-}

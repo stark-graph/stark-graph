@@ -1,4 +1,5 @@
-class Node {
+export default {
+  BST: `class Node {
   constructor(val) {
     this.value = val;
     this.left = null;
@@ -38,4 +39,5 @@ class BST {
       }
     }
   }
-}
+}`,
+};

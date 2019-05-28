@@ -32,13 +32,12 @@ const MainContainer = props => {
       style={{
         display: 'flex',
         flexDirection: 'row',
-        width: '100%',
         height: '100%',
       }}
     >
       <LeftBar addElement={addActiveArrElement} />
       <Graph treesArr={treesArr} treesObj={treesObj} activeTree={activeTree} />
-      <RightBar algoName={algoName} />
+      <RightBar algoName={algoName} activeTree={activeTree} />
     </div>
   );
 };

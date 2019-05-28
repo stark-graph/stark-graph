@@ -1,4 +1,5 @@
-function MaxHeap() {
+export default {
+  maxHeap: `function MaxHeap() {
   this.arr = [null];
 }
 
@@ -42,4 +43,5 @@ MaxHeap.prototype.delMax = function() {
   this.arr.pop();
   this.sink(1);
   return tmpMax;
+};`,
 };

@@ -1,62 +1,26 @@
 import React from 'react';
+import maxHeap from './code/maxHeap';
+import BST from './code/BST';
 
-const codeString = `class Node {
-  constructor(val) {
-    this.value = val;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-class BST {
-  constructor() {
-    this.root = null;
-  }
-
-  add(val) {
-    const root = this.root;
-
-    if (!root) {
-      this.root = new Node(val);
-      return;
-    }
-
-    let currentNode = root;
-    const newNode = new Node(val);
-
-    while (currentNode) {
-      if (val < currentNode.value) {
-        if (!currentNode.left) {
-          currentNode.left = newNode;
-          break;
-        } else {
-          currentNode = currentNode.left;
-        }
-      } else {
-        if (!currentNode.right) {
-          currentNode.right = newNode;
-          break;
-        } else {
-          currentNode = currentNode.right;
-        }
-      }
-    }
-  }
-}`;
-
-const AlgoSelector = () => (
-  <div
-    className="algo"
-    style={{
-      width: 'auto',
-      height: '100%',
-      overflowY: 'auto',
-    }}
-  >
-    <pre>
-      <code className="language-javascript">{codeString}</code>
-    </pre>
-  </div>
-);
+const AlgoSelector = props => {
+  const { activeTree } = props;
+  console.log('activeTree', activeTree, 'heap', maxHeap, 'bst', BST);
+  return (
+    <div
+      className="algo"
+      style={{
+        width: 'auto',
+        height: '100%',
+        overflowY: 'auto',
+      }}
+    >
+      <pre>
+        <code className="language-javascript">
+          {activeTree <= 1 ? BST.BST : maxHeap.maxHeap}
+        </code>
+      </pre>
+    </div>
+  );
+};
 
 export default AlgoSelector;

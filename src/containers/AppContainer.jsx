@@ -16,7 +16,7 @@ const mapStateToProps = store => ({
 });
 
 const AppContainer = props => {
-  const { changeIdxOfActiveTree, treesArr } = props;
+  const { changeIdxOfActiveTree, treesArr, activeTree } = props;
 
   return (
     <div
@@ -24,11 +24,14 @@ const AppContainer = props => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        width: '100%',
         height: '100%',
       }}
     >
-      <HeaderBar changeActiveTree={changeIdxOfActiveTree} treesArr={treesArr} />
+      <HeaderBar
+        activeTree={activeTree}
+        changeActiveTree={changeIdxOfActiveTree}
+        treesArr={treesArr}
+      />
       <MainContainer />
     </div>
   );

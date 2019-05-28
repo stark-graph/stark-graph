@@ -9,13 +9,8 @@ export const App = () => (
       flexDirection: 'column',
       width: '98vw',
       height: '95vh',
-      borderStyle: 'solid',
-      borderWidth: '2px',
     }}
   >
-    <header style={{ height: '40px', width: '100%', color: 'red' }}>
-      <strong>Tree Visualizer</strong>
-    </header>
     <AppContainer />
   </div>
 );
