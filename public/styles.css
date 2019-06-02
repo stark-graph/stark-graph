@@ -25,20 +25,12 @@ body {
   justify-content: space-evenly
 }
 
-/* .graph {
-  width: 80%;
-  height: 100%;
-} */
-/* 
 .code-container {
-  /* width: 40%; */
-  /* height: 100%;
-  overflow-y: auto; */
-  /* display: flex */
- /* */ 
+  width: auto;
+  overflow-y: auto
+}
 
 /* div of RightBar within MainContainer */
 .right-bar {
-  width: 40%;
-  height: auto
+  /* height: auto */
 }

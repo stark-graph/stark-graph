@@ -8,7 +8,7 @@ const CodeContainer = props => {
     <div className="code-container">
       <pre>
         <code className="language-javascript">
-          {activeTree <= 1 ? BST.BST : maxHeap.maxHeap}
+          {activeTree === 0 ? BST.BST : maxHeap.maxHeap}
         </code>
       </pre>
     </div>
