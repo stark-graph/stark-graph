@@ -18,15 +18,14 @@ const mapStateToProps = store => ({
 const MainContainer = props => {
   const { activeTree, treesArr } = props;
 
+  const styles = {
+    display: 'flex',
+    flexDirection: 'row',
+    height: '100%',
+  };
+
   return (
-    <div
-      className="main-container"
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        height: '100%',
-      }}
-    >
+    <div className="main-container" style={styles}>
       <Graph treesArr={treesArr} activeTree={activeTree} />
       <RightBar activeTree={activeTree} />
     </div>

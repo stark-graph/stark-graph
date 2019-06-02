@@ -26,7 +26,7 @@ const NavBar = props => {
           onChange={e => setInput(e.target.value)}
         />
         <button
-          type="submit button"
+          type="submit btn"
           className="btn btn-outline-secondary btn-sm"
           onClick={event =>
             handleAddElement({ event, input, addElement, setInput })
@@ -39,7 +39,7 @@ const NavBar = props => {
         {treesArr.map((el, idx) => (
           <TreeTab
             treeIdx={idx}
-            key={`tree{idx}`}
+            key={`tree${idx}`}
             changeActiveTree={changeActiveTree}
           />
         ))}

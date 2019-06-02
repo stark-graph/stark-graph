@@ -2,17 +2,10 @@ import React from 'react';
 import maxHeap from './code/maxHeap';
 import BST from './code/BST';
 
-const AlgoSelector = props => {
+const CodeContainer = props => {
   const { activeTree } = props;
   return (
-    <div
-      className="algo"
-      style={{
-        width: 'auto',
-        height: '100%',
-        overflowY: 'auto',
-      }}
-    >
+    <div className="code-container">
       <pre>
         <code className="language-javascript">
           {activeTree <= 1 ? BST.BST : maxHeap.maxHeap}
@@ -22,4 +15,4 @@ const AlgoSelector = props => {
   );
 };
 
-export default AlgoSelector;
+export default CodeContainer;

@@ -27,6 +27,7 @@ function addElement(state, val) {
 }
 
 function changeActiveTree(state, treeIdx) {
+  console.log('treeIdx', treeIdx);
   return { ...state, activeTree: treeIdx };
 }
 

@@ -6,14 +6,39 @@ body {
   height: 100%;
 }
 
-/* div of MainContainer */
-.main-container {
+.app {
   display: flex;
-  width: 30px;
-  height: 30px;
+  flex-direction: column;
+  height: 100vh;
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+.main-container {
+  background-color: #2d2d2d;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly
+}
+
+/* .graph {
+  width: 80%;
+  height: 100%;
+} */
+/* 
+.code-container {
+  /* width: 40%; */
+  /* height: 100%;
+  overflow-y: auto; */
+  /* display: flex */
+ /* */ 
 
 /* div of RightBar within MainContainer */
 .right-bar {
-  display: flex;
+  width: 40%;
+  height: auto
 }

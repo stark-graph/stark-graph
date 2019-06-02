@@ -67,13 +67,7 @@ const createTree = arr => {
 const Graph = props => {
   const { treesArr, activeTree } = props;
   return (
-    <div
-      className="graph"
-      style={{
-        width: '80%',
-        height: '100%',
-      }}
-    >
+    <div className="graph col justify-content-end">
       <Tree
         data={createTree(treesArr[activeTree])}
         separation={{ siblings: 1, nonSiblings: 1 }}
