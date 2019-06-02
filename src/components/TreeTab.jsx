@@ -4,16 +4,12 @@ import React from 'react';
 const TreeTab = props => {
   const { changeActiveTree, treeIdx } = props;
   return (
-    <div
-      className="treeTab"
+    <button
+      className="btn TreeTab"
       onClick={() => changeActiveTree({ treeIdx })}
-      style={{
-        width: '20%',
-        height: '100%',
-      }}
     >
-      {treeIdx <= 1 ? `Binary Search Tree` : `Max Heap`}
-    </div>
+      {treeIdx < 1 ? `Binary Search Tree` : `Max Heap`}
+    </button>
   );
 };
 

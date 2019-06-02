@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import HeaderBar from './HeaderBar.jsx';
 import NavBar from '../components/NavBar.jsx';
 import MainContainer from './MainContainer.jsx';
 import { changeActiveTree, addElement } from '../actions/active-actions.js';
@@ -36,8 +35,8 @@ const AppContainer = props => {
         height: '100%',
       }}
     >
-      <NavBar addElement={addActiveArrElement} />
-      <HeaderBar
+      <NavBar
+        addElement={addActiveArrElement}
         activeTree={activeTree}
         changeActiveTree={changeIdxOfActiveTree}
         treesArr={treesArr}

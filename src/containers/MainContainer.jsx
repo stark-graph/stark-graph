@@ -16,7 +16,7 @@ const mapStateToProps = store => ({
 });
 
 const MainContainer = props => {
-  const { activeTree, treesArr, addActiveArrElement } = props;
+  const { activeTree, treesArr } = props;
 
   return (
     <div

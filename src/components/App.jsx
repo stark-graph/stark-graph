@@ -7,7 +7,6 @@ export const App = () => (
     style={{
       display: 'flex',
       flexDirection: 'column',
-      width: '98vw',
       height: '95vh',
     }}
   >

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TreeTab from './TreeTab.jsx';
 
 const handleAddElement = ({ event, input, addElement, setInput }) => {
   event.preventDefault();
@@ -13,7 +14,7 @@ const handleAddElement = ({ event, input, addElement, setInput }) => {
 const NavBar = props => {
   const [input, setInput] = useState('');
 
-  const { addElement } = props;
+  const { addElement, changeActiveTree, treesArr } = props;
   return (
     <div className="navbar navbar-light bg-light">
       <form className="form-inline">
@@ -34,6 +35,15 @@ const NavBar = props => {
           add node
         </button>
       </form>
+      <div>
+        {treesArr.map((el, idx) => (
+          <TreeTab
+            treeIdx={idx}
+            key={idx}
+            changeActiveTree={changeActiveTree}
+          />
+        ))}
+      </div>
     </div>
   );
 };
