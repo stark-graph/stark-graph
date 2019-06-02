@@ -12,7 +12,7 @@ const TreeTab = props => {
         height: '100%',
       }}
     >
-      {`Tree ${treeIdx}`}
+      {treeIdx <= 1 ? `Binary Search Tree` : `Max Heap`}
     </div>
   );
 };
