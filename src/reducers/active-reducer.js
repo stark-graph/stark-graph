@@ -1,7 +1,6 @@
 import * as types from '../actions/action-types';
 
 const initialState = {
-  algoName: '',
   activeTree: 0,
   treesArr: [[10], [10], [10]],
 };

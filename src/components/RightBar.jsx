@@ -2,7 +2,7 @@ import React from 'react';
 import AlgoSelector from './AlgoSelector.jsx';
 
 const RightBar = props => {
-  const { algoName, activeTree } = props;
+  const { activeTree } = props;
   return (
     <div
       className="right-bar"
@@ -11,7 +11,7 @@ const RightBar = props => {
         height: 'auto',
       }}
     >
-      <AlgoSelector algoName={algoName} activeTree={activeTree} />
+      <AlgoSelector activeTree={activeTree} />
     </div>
   );
 };

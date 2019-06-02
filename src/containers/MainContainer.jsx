@@ -18,13 +18,7 @@ const mapStateToProps = store => ({
 });
 
 const MainContainer = props => {
-  const {
-    activeTree,
-    treesArr,
-    algoName,
-    treesObj,
-    addActiveArrElement,
-  } = props;
+  const { activeTree, treesArr, treesObj, addActiveArrElement } = props;
 
   return (
     <div
@@ -37,7 +31,7 @@ const MainContainer = props => {
     >
       <LeftBar addElement={addActiveArrElement} />
       <Graph treesArr={treesArr} treesObj={treesObj} activeTree={activeTree} />
-      <RightBar algoName={algoName} activeTree={activeTree} />
+      <RightBar activeTree={activeTree} />
     </div>
   );
 };
