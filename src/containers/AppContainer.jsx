@@ -3,11 +3,14 @@ import { connect } from 'react-redux';
 import HeaderBar from './HeaderBar.jsx';
 import NavBar from '../components/NavBar.jsx';
 import MainContainer from './MainContainer.jsx';
-import { changeActiveTree } from '../actions/active-actions.js';
+import { changeActiveTree, addElement } from '../actions/active-actions.js';
 
 const mapDispatchToProps = dispatch => ({
   changeIdxOfActiveTree: ({ treeIdx }) => {
     dispatch(changeActiveTree({ treeIdx }));
+  },
+  addActiveArrElement: ({ val }) => {
+    dispatch(addElement({ val }));
   },
 });
 
@@ -17,7 +20,12 @@ const mapStateToProps = store => ({
 });
 
 const AppContainer = props => {
-  const { changeIdxOfActiveTree, treesArr, activeTree } = props;
+  const {
+    changeIdxOfActiveTree,
+    treesArr,
+    activeTree,
+    addActiveArrElement,
+  } = props;
 
   return (
     <div
@@ -28,7 +36,7 @@ const AppContainer = props => {
         height: '100%',
       }}
     >
-      <NavBar />
+      <NavBar addElement={addActiveArrElement} />
       <HeaderBar
         activeTree={activeTree}
         changeActiveTree={changeIdxOfActiveTree}

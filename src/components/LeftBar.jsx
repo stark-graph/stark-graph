@@ -1,47 +1,47 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-const handleAddElement = ({ event, input, addElement, setInput }) => {
-  event.preventDefault();
-  if (/\D/gm.test(input)) {
-    alert('only numbers allowed!');
-    return;
-  }
-  addElement({ val: input });
-  setInput('');
-};
+// const handleAddElement = ({ event, input, addElement, setInput }) => {
+//   event.preventDefault();
+//   if (/\D/gm.test(input)) {
+//     alert('only numbers allowed!');
+//     return;
+//   }
+//   addElement({ val: input });
+//   setInput('');
+// };
 
-const LeftBar = props => {
-  const [input, setInput] = useState('');
+// const LeftBar = props => {
+//   const [input, setInput] = useState('');
 
-  const { addElement } = props;
-  return (
-    <div
-      className="left-bar"
-      style={{
-        width: '20%',
-        height: '100%',
-      }}
-    >
-      <form>
-        <input
-          className="form-control-sm"
-          type="text"
-          placeholder="add node here"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        />
-        <button
-          type="submit button"
-          className="btn btn-outline-secondary btn-sm"
-          onClick={event =>
-            handleAddElement({ event, input, addElement, setInput })
-          }
-        >
-          add node
-        </button>
-      </form>
-    </div>
-  );
-};
+//   const { addElement } = props;
+//   return (
+//     <div
+//       className="left-bar"
+//       style={{
+//         width: '20%',
+//         height: '100%',
+//       }}
+//     >
+//       <form>
+//         <input
+//           className="form-control-sm"
+//           type="text"
+//           placeholder="add node here"
+//           value={input}
+//           onChange={e => setInput(e.target.value)}
+//         />
+//         <button
+//           type="submit button"
+//           className="btn btn-outline-secondary btn-sm"
+//           onClick={event =>
+//             handleAddElement({ event, input, addElement, setInput })
+//           }
+//         >
+//           add node
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
 
-export default LeftBar;
+// export default LeftBar;

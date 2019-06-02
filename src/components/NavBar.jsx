@@ -1,12 +1,41 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 
-const NavBar = () => (
-  <div className="navbar navbar-light bg-light">
-    <form className="form-inline">
-      {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>  */}
-    </form>
-  </div>
-);
+const handleAddElement = ({ event, input, addElement, setInput }) => {
+  event.preventDefault();
+  if (/\D/gm.test(input)) {
+    alert('only numbers allowed!');
+    return;
+  }
+  addElement({ val: input });
+  setInput('');
+};
+
+const NavBar = props => {
+  const [input, setInput] = useState('');
+
+  const { addElement } = props;
+  return (
+    <div className="navbar navbar-light bg-light">
+      <form className="form-inline">
+        <input
+          className="form-control-mr-sm"
+          type="text"
+          placeholder="add node here"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        />
+        <button
+          type="submit button"
+          className="btn btn-outline-secondary btn-sm"
+          onClick={event =>
+            handleAddElement({ event, input, addElement, setInput })
+          }
+        >
+          add node
+        </button>
+      </form>
+    </div>
+  );
+};
 
 export default NavBar;

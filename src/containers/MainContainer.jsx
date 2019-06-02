@@ -29,7 +29,7 @@ const MainContainer = props => {
         height: '100%',
       }}
     >
-      <LeftBar addElement={addActiveArrElement} />
+      {/* <LeftBar addElement={addActiveArrElement} /> */}
       <Graph treesArr={treesArr} treesObj={treesObj} activeTree={activeTree} />
       <RightBar activeTree={activeTree} />
     </div>
