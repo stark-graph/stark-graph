@@ -4,7 +4,6 @@ import BST from './code/BST';
 
 const AlgoSelector = props => {
   const { activeTree } = props;
-  console.log('activeTree', activeTree, 'heap', maxHeap, 'bst', BST);
   return (
     <div
       className="algo"

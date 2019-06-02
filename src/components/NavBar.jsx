@@ -39,7 +39,7 @@ const NavBar = props => {
         {treesArr.map((el, idx) => (
           <TreeTab
             treeIdx={idx}
-            key={idx}
+            key={`tree{idx}`}
             changeActiveTree={changeActiveTree}
           />
         ))}
