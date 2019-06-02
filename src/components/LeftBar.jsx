@@ -24,15 +24,15 @@ const LeftBar = props => {
     >
       <form>
         <input
+          className="form-control-sm"
           type="text"
-          name=""
-          id=""
           placeholder="add node here"
           value={input}
           onChange={e => setInput(e.target.value)}
         />
         <button
-          type="submit"
+          type="submit button"
+          className="btn btn-outline-secondary btn-sm"
           onClick={event =>
             handleAddElement({ event, input, addElement, setInput })
           }
