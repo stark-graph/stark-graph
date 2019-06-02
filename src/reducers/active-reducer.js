@@ -2,7 +2,7 @@ import * as types from '../actions/action-types';
 
 const initialState = {
   activeTree: 0,
-  treesArr: [[10], [10], [10]],
+  treesArr: [[10], [10]],
 };
 
 function addElement(state, val) {
