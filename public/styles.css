@@ -6,6 +6,10 @@ body {
   height: 100%;
 }
 
+.btn {
+  margin-left: .5em
+}
+
 .app {
   display: flex;
   flex-direction: column;

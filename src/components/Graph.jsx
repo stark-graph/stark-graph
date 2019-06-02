@@ -12,7 +12,7 @@ class Node {
         r: 10,
         x: 0,
         y: 0,
-        fill: isNewest ? '#FF9AC1' : '#19f9d8',
+        fill: isNewest ? '#cc99cd' : '#f8c555',
       },
     };
     this.children = ['', ''];
@@ -78,12 +78,14 @@ const Graph = props => {
           nodes: {
             node: {
               name: {
-                stroke: '#FF9AC1',
+                fill: '#999',
+                stroke: '#999',
               },
             },
             leafNode: {
               name: {
-                stroke: '#FF9AC1',
+                fill: '#999',
+                stroke: '#999',
               },
             },
           },
