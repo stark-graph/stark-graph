@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import RightBar from '../components/RightBar.jsx';
 import Graph from '../components/Graph.jsx';
-import LeftBar from '../components/LeftBar.jsx';
 import { addElement } from '../actions/active-actions.js';
 
 const mapDispatchToProps = dispatch => ({
@@ -14,11 +13,10 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = store => ({
   activeTree: store.activeState.activeTree,
   treesArr: store.activeState.treesArr,
-  treesObj: store.activeState.treesObj,
 });
 
 const MainContainer = props => {
-  const { activeTree, treesArr, treesObj, addActiveArrElement } = props;
+  const { activeTree, treesArr, addActiveArrElement } = props;
 
   return (
     <div
@@ -29,7 +27,7 @@ const MainContainer = props => {
         height: '100%',
       }}
     >
-      <Graph treesArr={treesArr} treesObj={treesObj} activeTree={activeTree} />
+      <Graph treesArr={treesArr} activeTree={activeTree} />
       <RightBar activeTree={activeTree} />
     </div>
   );
