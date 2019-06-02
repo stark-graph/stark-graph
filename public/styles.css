@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .app-container {
