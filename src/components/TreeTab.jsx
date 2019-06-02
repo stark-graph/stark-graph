@@ -1,10 +1,10 @@
 import React from 'react';
 
-// add onClick to change focusTree
 const TreeTab = props => {
   const { changeActiveTree, treeIdx } = props;
   return (
     <button
+      type="button"
       className="btn tree-tab"
       onClick={() => changeActiveTree({ treeIdx })}
     >

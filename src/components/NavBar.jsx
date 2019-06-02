@@ -3,7 +3,7 @@ import TreeTab from './TreeTab.jsx';
 
 const handleAddElement = ({ event, input, addElement, setInput }) => {
   event.preventDefault();
-  if (/\D/gm.test(input)) {
+  if (!input || /\D/gm.test(input)) {
     alert('only numbers allowed!');
     return;
   }
