@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-// Reducers
+// reducers
 import activeReducer from './active-reducer';
 
-// Combine Reducers
+// combine reducers
 const reducers = combineReducers({
   activeState: activeReducer,
 });

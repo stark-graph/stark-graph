@@ -3,8 +3,7 @@ import * as types from '../actions/action-types';
 const initialState = {
   algoName: '',
   activeTree: 0,
-  treesArr: [[11, 16, 14, 15, 22, 12, 13, 100], [1, 2], [10]],
-  treesObj: [{}, {}, {}],
+  treesArr: [[10], [10], [10]],
 };
 
 function addElement(state, val) {
@@ -29,7 +28,6 @@ function addElement(state, val) {
 }
 
 function changeActiveTree(state, treeIdx) {
-  console.log('changing active tree to: ', treeIdx);
   return { ...state, activeTree: treeIdx };
 }
 
