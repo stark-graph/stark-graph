@@ -32,10 +32,6 @@ body {
 
 .code-container {
   width: auto;
-  overflow-y: auto
-}
-
-/* div of RightBar within MainContainer */
-.right-bar {
-  /* height: auto */
+  overflow-y: auto;
+  height: 100%;
 }
