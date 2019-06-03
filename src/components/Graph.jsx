@@ -1,7 +1,7 @@
 import React from 'react';
 import Tree from 'react-d3-tree';
 import { createTree } from '../utils/BST.js';
-import { buildMaxHeap, assembleHeap } from '../utils/heap.js';
+import { buildMaxHeap } from '../utils/heap.js';
 
 const Graph = props => {
   const { treesArr, activeTree } = props;

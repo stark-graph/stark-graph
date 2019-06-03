@@ -9,7 +9,7 @@ class Node {
         r: 10,
         x: 0,
         y: 0,
-        fill: this.isNewest ? '#f08d49' : '#cc99cd',
+        fill: isNewest ? '#f08d49' : '#cc99cd',
       },
     };
     this.children = ['', ''];
@@ -24,18 +24,14 @@ function assembleHeap(arr, i = 1, newestVal) {
   }
 
   let isNewest = false;
-  for (const el of arr) {
-    if (el === newestVal) {
-      console.log('newestVal', newestVal);
-      isNewest = true;
-    }
+  if (arr[i] === newestVal) {
+    isNewest = true;
   }
 
   const node = new Node(arr[i], isNewest);
 
-  node.children[0] = assembleHeap(arr, i * 2);
-  node.children[1] = assembleHeap(arr, i * 2 + 1);
-  console.log('node', node);
+  node.children[0] = assembleHeap(arr, i * 2, newestVal);
+  node.children[1] = assembleHeap(arr, i * 2 + 1, newestVal);
   return node;
 }
 
@@ -114,17 +110,3 @@ MaxHeap.prototype.delMax = function() {
   this.sink(1);
   return tmpMax;
 };
-
-// function assembleHeap(arr, i = 1, maxI, tree = new Node(null)) {
-//   if (i >= maxI) {
-//     return {
-//       name: null,
-//     };
-//   }
-//   const node = new Node(arr[0]);
-//   const leftChildIdx = i === 0 ? 1 : i*2;
-//   const rightChildIdx = i === 0 ? 2 : i*2 + 1;
-//   node.children[0] = assembleHeap(arr, leftChildIdx, maxI);
-//   node.children[1] = assembleHeap(arr, rightChildIdx, maxI);
-//   return node;
-// }
