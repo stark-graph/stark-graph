@@ -9,7 +9,7 @@ class Node {
         r: 10,
         x: 0,
         y: 0,
-        fill: isNewest ? 'red' : 'grey',
+        fill: isNewest ? '#f08d49' : '#cc99cd',
       },
     };
     this.children = ['', ''];
@@ -30,37 +30,25 @@ function assembleHeap(arr, i = 1, newestVal) {
 
   const node = new Node(arr[i], isNewest);
 
-  node.children[0] = assembleHeap(arr, i * 2);
-  node.children[1] = assembleHeap(arr, i * 2 + 1);
-
+  node.children[0] = assembleHeap(arr, i * 2, newestVal);
+  node.children[1] = assembleHeap(arr, i * 2 + 1, newestVal);
   return node;
 }
 
 export function buildMaxHeap(arr) {
   const newestVal = arr[arr.length - 1];
-  // const arrCopy = [...arr];
-  // console.log('arrCopy: ', arrCopy);
-  // let i = Math.floor(arrCopy.length / 2 - 1);
-
-  // // Build a max heap out of
-  // // all arrCopy elements passed in.
-  // for (i; i >= 0; i--) {
-  //   heapify(arrCopy, i, arrCopy.length);
-  // }
-  // return arrCopy;
   const heap = new MaxHeap();
-  for (let el of arr) {
+  for (const el of arr) {
     heap.insert(el);
   }
-  console.log('sdfoidskflbsf', heap.arr);
   return assembleHeap(heap.arr, 1, newestVal);
 }
 
 function heapify(heap, i, max) {
   while (i < max) {
     let index = i;
-    let leftChild = 2 * i + 1;
-    let righChild = leftChild + 1;
+    const leftChild = 2 * i + 1;
+    const righChild = leftChild + 1;
 
     if (leftChild < max && heap[leftChild] > heap[index]) {
       index = leftChild;
@@ -68,7 +56,7 @@ function heapify(heap, i, max) {
       index = righChild;
     }
 
-    if (index == i) {
+    if (index === i) {
       return;
     }
 
@@ -90,7 +78,7 @@ MaxHeap.prototype.swim = function(idx) {
   let pIdx = Math.floor(idx / 2);
   while (idx > 1 && this.arr[idx] >= this.arr[pIdx]) {
     // swap
-    let temp = this.arr[pIdx];
+    const temp = this.arr[pIdx];
     this.arr[pIdx] = this.arr[idx];
     this.arr[idx] = temp;
 
@@ -108,7 +96,7 @@ MaxHeap.prototype.sink = function(idx) {
       childIdx += 1;
     }
     if (this.arr[childIdx] < this.arr[idx]) break;
-    let tmp = this.arr[idx];
+    const tmp = this.arr[idx];
     this.arr[idx] = this.arr[childIdx];
     this.arr[childIdx] = tmp;
     idx = childIdx;
@@ -122,34 +110,3 @@ MaxHeap.prototype.delMax = function() {
   this.sink(1);
   return tmpMax;
 };
-
-// function assembleHeap(arr, i = 1, maxI, tree = new Node(null)) {
-//   if (i >= maxI) {
-//     return {
-//       name: null,
-//     };
-//   }
-//   const node = new Node(arr[0]);
-//   const leftChildIdx = i === 0 ? 1 : i*2;
-//   const rightChildIdx = i === 0 ? 2 : i*2 + 1;
-//   node.children[0] = assembleHeap(arr, leftChildIdx, maxI);
-//   node.children[1] = assembleHeap(arr, rightChildIdx, maxI);
-//   return node;
-// }
-
-// a = new MaxHeap()
-// console.log(a)
-// a.insert(5)
-// a.insert(8)
-// a.insert(2)
-// a.insert(12)
-// a.insert(9)
-// a.insert(15)
-// console.log(a)
-// a.delMax()
-// console.log(a)
-// a.insert(22)
-// console.log(a)
-// a.insert(15)
-// a.insert(7)
-// console.log(a)

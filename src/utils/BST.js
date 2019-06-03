@@ -9,7 +9,7 @@ class Node {
         r: 10,
         x: 0,
         y: 0,
-        fill: isNewest ? 'red' : 'grey',
+        fill: isNewest ? '#f08d49' : '#cc99cd',
       },
     };
     this.children = ['', ''];
@@ -37,7 +37,7 @@ const addNewNode = (node, val, isNewest) => {
 };
 
 const filterEmptyStrings = obj => {
-  for (let key in obj) {
+  for (const key of Object.keys(obj)) {
     if (key === 'children') {
       obj[key].forEach((node, i) => {
         if (node === '') {
@@ -53,8 +53,8 @@ const filterEmptyStrings = obj => {
 
 export const createTree = arr => {
   const newTree = new Node(arr[0]);
-  for (let i = 1; i < arr.length; i++) {
-    let isNewest = i === arr.length - 1;
+  for (let i = 1; i < arr.length; i += 1) {
+    const isNewest = i === arr.length - 1;
     addNewNode(newTree, arr[i], isNewest);
   }
   // d3 expects an array of objects

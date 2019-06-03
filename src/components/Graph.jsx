@@ -1,53 +1,34 @@
 import React from 'react';
 import Tree from 'react-d3-tree';
 import { createTree } from '../utils/BST.js';
-import { buildMaxHeap, assembleHeap } from '../utils/heap.js';
-
-const test = (treesArr, activeTree) => {
-  console.log('sdfubsdf', treesArr[activeTree]);
-
-  if (activeTree === 0 || activeTree === 1) {
-    return createTree(treesArr[activeTree]);
-  }
-  return buildMaxHeap(treesArr[activeTree]);
-  // console.log('heapdskfb', heap);
-  // return assembleHeap(heap);
-};
+import { buildMaxHeap } from '../utils/heap.js';
 
 const Graph = props => {
   const { treesArr, activeTree } = props;
+  const treeData =
+    activeTree === 0
+      ? createTree(treesArr[activeTree])
+      : buildMaxHeap(treesArr[activeTree]);
   return (
-    <div
-      className="graph"
-      style={{
-        width: '80%',
-        height: '100%',
-        borderStyle: 'solid',
-        borderWidth: '2px',
-      }}
-    >
-      Binary Search Tree
+    <div className="graph col-9 justify-content-start">
       <Tree
-        // data={createTree(treesArr[activeTree])}
-        data={test(treesArr, activeTree)}
+        data={treeData}
         separation={{ siblings: 0.9, nonSiblings: 0.9 }}
-        orientation={'vertical'}
+        orientation="vertical"
         transitionDuration={0}
-        translate={{ x: 500, y: 25 }}
+        translate={{ x: 300, y: 25 }}
         styles={{
           nodes: {
             node: {
               name: {
-                fill: '#D3D3D3',
-                stroke: '#D3D3D3',
-                strokeWidth: 1,
+                fill: '#999',
+                stroke: '#999',
               },
             },
             leafNode: {
               name: {
-                fill: '#D3D3D3',
-                stroke: '#D3D3D3',
-                strokeWidth: 1,
+                fill: '#999',
+                stroke: '#999',
               },
             },
           },

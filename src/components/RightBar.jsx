@@ -1,17 +1,11 @@
 import React from 'react';
-import AlgoSelector from './AlgoSelector.jsx';
+import CodeContainer from './CodeContainer.jsx';
 
 const RightBar = props => {
   const { activeTree } = props;
   return (
-    <div
-      className="right-bar"
-      style={{
-        width: '20%',
-        height: 'auto',
-      }}
-    >
-      <AlgoSelector activeTree={activeTree} />
+    <div className="right-bar col-3">
+      <CodeContainer activeTree={activeTree} />
     </div>
   );
 };

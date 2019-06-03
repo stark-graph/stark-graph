@@ -1,4 +1,5 @@
-class Node {
+export default {
+  BST: `class Node {
   constructor(val) {
     this.value = val;
     this.left = null;
@@ -12,14 +13,14 @@ class BST {
   }
 
   add(val) {
-    const root = this.root;
+    const { root } = this;
 
     if (!root) {
       this.root = new Node(val);
       return;
     }
 
-    const currentNode = root;
+    let currentNode = root;
     const newNode = new Node(val);
 
     while (currentNode) {
@@ -30,14 +31,13 @@ class BST {
         } else {
           currentNode = currentNode.left;
         }
+      } else if (!currentNode.right) {
+        currentNode.right = newNode;
+        break;
       } else {
-        if (!currentNode.right) {
-          currentNode.right = newNode;
-          break;
-        } else {
-          currentNode = currentNode.right;
-        }
+        currentNode = currentNode.right;
       }
     }
   }
-}
+}`,
+};
