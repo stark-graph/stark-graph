@@ -1,5 +1,6 @@
 import * as types from '../actions/action-types';
 
+// TODO: remove hardcoded root node; allow for root to be added by user
 const initialState = {
   activeTree: 0,
   treesArr: [[10], [10]],

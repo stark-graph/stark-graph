@@ -2,6 +2,7 @@ import React from 'react';
 import maxHeap from './code/maxHeap';
 import BST from './code/BST';
 
+// TODO: fix syntax highlighting for maxHeap
 const CodeContainer = props => {
   const { activeTree } = props;
   return (

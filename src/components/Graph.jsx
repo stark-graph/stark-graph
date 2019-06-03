@@ -5,14 +5,17 @@ import { buildMaxHeap } from '../utils/heap.js';
 
 const Graph = props => {
   const { treesArr, activeTree } = props;
-  const treeData =
-    activeTree === 0
-      ? createTree(treesArr[activeTree])
-      : buildMaxHeap(treesArr[activeTree]);
+
+  // const treeData =
+
   return (
     <div className="graph col-9 justify-content-start">
       <Tree
-        data={treeData}
+        data={
+          activeTree === 0
+            ? createTree(treesArr[activeTree])
+            : buildMaxHeap(treesArr[activeTree])
+        }
         separation={{ siblings: 0.9, nonSiblings: 0.9 }}
         orientation="vertical"
         transitionDuration={0}
