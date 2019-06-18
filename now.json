@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "stark-graph",
+  "alias": "stark-graph.now.sh",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "./build"
+      }
+    }
+  ]
+}
