@@ -1,5 +1,4 @@
 const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -41,7 +40,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [new BundleAnalyzerPlugin()],
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, 'public'),
