@@ -9,5 +9,5 @@ stark-graph is an interactive visualizer for data structures. Currently supports
 Users can add nodes, with each new addition highlighted.
 
 <p align="center">
- <img src="https://github.com/gmal1/stark-graph/blob/master/src/assets/stark-bst.png" alt="binary search tree visualizer" width='80%'></a>
+ <img src="https://github.com/gmal1/stark-graph/blob/master/src/assets/stark-bst.png" alt="binary search tree visualizer" width='40%'></a>
 </p>

@@ -6,8 +6,6 @@ import { buildMaxHeap } from '../utils/heap.js';
 const Graph = props => {
   const { treesArr, activeTree } = props;
 
-  // const treeData =
-
   return (
     <div className="graph col-9 justify-content-start">
       <Tree
