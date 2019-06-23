@@ -7,7 +7,7 @@ const Graph = props => {
   const { treesArr, activeTree } = props;
 
   return (
-    <div className="graph col-9 justify-content-start">
+    <div className="graph col-9">
       <Tree
         data={
           activeTree === 0
@@ -17,7 +17,7 @@ const Graph = props => {
         separation={{ siblings: 0.9, nonSiblings: 0.9 }}
         orientation="vertical"
         transitionDuration={0}
-        translate={{ x: 300, y: 25 }}
+        translate={{ x: 550, y: 250 }}
         styles={{
           nodes: {
             node: {
