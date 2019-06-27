@@ -63,4 +63,6 @@ typings/
 # ignore bundle
 build/
 
-package-lock.json
+#prism styles
+public/prism
+public/prism.js
