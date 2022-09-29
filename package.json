@@ -20,7 +20,7 @@
   "homepage": "https://github.com/gmal1/stark-graph#readme",
   "dependencies": {
     "acorn": "^6.1.1",
-    "d3": "^5.9.2",
+    "d3": "^7.6.1",
     "express": "^4.16.4",
     "react": "^16.8.6",
     "react-d3-tree": "^1.12.4",
