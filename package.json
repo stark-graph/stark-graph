@@ -21,7 +21,7 @@
   "dependencies": {
     "acorn": "^6.1.1",
     "d3": "^5.9.2",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "react": "^16.8.6",
     "react-d3-tree": "^1.12.4",
     "react-dom": "^16.8.6",
